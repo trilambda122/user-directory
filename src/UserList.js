@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserCard from './UserCard'
 import './style.css'
 
-const url='https://randomuser.me/api/?results=1000&nat=us&seed=userdir'
+const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
 
 
 const UserList = () =>{
@@ -71,11 +71,9 @@ useEffect(() => {
 {/* loop over users object array that was returned from the api call  */}
 {users.map((user)=>{
  return <tr key={user.login.uuid} className='row-effect'>
-   <th scope='row' ><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-secondary shadow-lg'/></th>
-<th scope='row' >{user.name.last},{user.name.first}</th>
-{/* <th scope='row'>{user.name.last}</th> */}
-{/* <th scope='row' className='font-weight-lighter'>{user.email} </th> */}
-<th scope='row' style={{fontSize:'12px'}} className=''>{user.phone}</th>
+   <td scope='row' ><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-secondary shadow-lg'/></td>
+<td scope='row' >{user.name.last},{user.name.first}</td>
+<td scope='row'  className=''>{user.phone}</td>
  </tr>
 
 })}
