@@ -5,7 +5,6 @@ import UserList from './UserList';
 const SearchBar = ({data,updateUsers}) =>{
 const [searchText,setSearchText] =useState('');
 
-
 const handleKeyPress = (e)=>{
 
   if (e.key === 'Enter') {
@@ -15,11 +14,7 @@ const handleKeyPress = (e)=>{
 }
 
 const onSearch = (searchStr)=>{
-  // let searchResults = data.filter((data)=>{
-  //   return data.name.last === searchStr
-  // })
-
-  let searchResults = data.filter((data)=>{
+  const searchResults = data.filter((data)=>{
     const pattern = `^${searchStr}`
     const re = new RegExp(pattern,'gi')
     return data.name.last.match(re)
@@ -37,8 +32,11 @@ return (
   className="form-control" placeholder="" 
   aria-label="Search" 
   aria-describedby="search-box"
-  onChange={(e)=> setSearchText(e.target.value)}
-  onKeyPress={handleKeyPress}
+  onChange={(e)=>{
+    setSearchText(e.target.value)
+    onSearch(e.target.value)
+  }}
+  // onKeyPress={handleKeyPress}
   />
 </div>
 </React.Fragment>
