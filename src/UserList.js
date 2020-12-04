@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './UserCard'
+import UserCard from './UserCard'
 
 const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
 
@@ -12,7 +14,7 @@ const UserList = () =>{
 const getUsers = async ()=>{
   const response = await fetch(url)
   const usersJSON = await response.json()
-  console.log(usersJSON.results)
+ 
   setUsers(usersJSON.results)
 }
 // Use Effect 
@@ -24,40 +26,32 @@ useEffect(() => {
 // RENDER return 
   return (
     <React.Fragment>
-<h1> A USER LIST</h1>
+{/* setup the table strcuture  */}
 <table className='table'>
-<thead>
+<thead className='thead-light'>
   <tr>
-    <th scope='col'>IMAGE</th>
-    <th scope='col'>FIRST NAME</th>
-    <th scope='col'>LAST NAME</th>
-    <th scope='col'>EMAIL</th>
-    <th scope='col'>PHONE</th>
+    <th scope='col'></th>
+    <th scope='col'>Name</th>
+    <th scope='col'>Phone</th>
+    {/* <th scope='col'>PHONE</th> */}
   </tr>
 </thead>
 <tbody>
+{/* loop over users object array that was returned from the api call  */}
 {users.map((user)=>{
- return <tr>
-   <th scope='row'><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-dark'/></th>
-<th scope='row'>{user.name.first}</th>
-<th scope='row'>{user.name.last}</th>
-<th scope='row'>{user.email}</th>
-<th scope='row'>{user.phone}</th>
+ return <tr key={user.login.uuid}>
+   <th scope='row'><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-secondary shadow-lg'/></th>
+<th scope='row' >{user.name.last},{user.name.first}</th>
+{/* <th scope='row'>{user.name.last}</th> */}
+{/* <th scope='row' className='font-weight-lighter'>{user.email} </th> */}
+<th scope='row' style={{fontSize:'12px'}} className=''>{user.phone}</th>
  </tr>
-   
- 
 
-// return <li  className='list-group-item' key={user.id.value}> 
-// <img src={user.picture.medium} alt={user.name.last} />
-// <h4>{user.name.last} , {user.name.first}</h4>
-// </li>
 })}
 
 </tbody>
 
 </table>
-
-
     </React.Fragment>
   
   
