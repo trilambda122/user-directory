@@ -6,6 +6,7 @@ import {faArrowAltCircleUp} from "@fortawesome/free-solid-svg-icons";
 import {faArrowAltCircleDown} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserCard from './UserCard'
+import './style.css'
 
 const url='https://randomuser.me/api/?results=1000&nat=us&seed=userdir'
 
@@ -52,11 +53,12 @@ useEffect(() => {
   return (
     <React.Fragment>
   <div className='container'>
+    {/* add search bar component and passing the users and a function for updating the state */}
 <SearchBar data={users} updateUsers={value => setUsers(value)}/>
 
 
 {/* setup the table strcuture  */}
-<table className='table'>
+<table className='table table-hover'>
 <thead className='thead-light'>
   <tr>
     <th scope='col'></th>
@@ -68,8 +70,8 @@ useEffect(() => {
 <tbody>
 {/* loop over users object array that was returned from the api call  */}
 {users.map((user)=>{
- return <tr key={user.login.uuid}>
-   <th scope='row'><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-secondary shadow-lg'/></th>
+ return <tr key={user.login.uuid} className='row-effect'>
+   <th scope='row' ><img src={user.picture.thumbnail} alt={user.name.last} className='rounded-circle border border-secondary shadow-lg'/></th>
 <th scope='row' >{user.name.last},{user.name.first}</th>
 {/* <th scope='row'>{user.name.last}</th> */}
 {/* <th scope='row' className='font-weight-lighter'>{user.email} </th> */}
