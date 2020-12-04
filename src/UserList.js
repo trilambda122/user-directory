@@ -1,19 +1,20 @@
 import React, {useState,useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './UserCard'
+import SearchBar from './SearchBar';
 import {faArrowAltCircleUp} from "@fortawesome/free-solid-svg-icons";
 import {faArrowAltCircleDown} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserCard from './UserCard'
 
-const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
+const url='https://randomuser.me/api/?results=1000&nat=us&seed=userdir'
 
 
 const UserList = () =>{
 // set states
   const [users,setUsers] = useState([])
 
-  // sort by last name A-Z
+// sort by last name A-Z
 const sortNamesAscending = (userObj)=>{  
 const newList = [...users].sort((a,b)=> {
   return a.name.last > b.name.last ? 1: -1
@@ -21,15 +22,13 @@ const newList = [...users].sort((a,b)=> {
 setUsers(newList)
   }
 
-    // sort by last name Z-A
+// sort by last name Z-A
   const sortNamesDescending = (userObj)=>{  
     const newList = [...users].sort((a,b)=> {
       return b.name.last > a.name.last ? 1: -1
     })
     setUsers(newList)
       }
-
-
 
 // fetch data from random user api
 const getUsers = async ()=>{
@@ -38,16 +37,24 @@ const getUsers = async ()=>{
  
   setUsers(usersJSON.results)
 }
-// Use Effect 
+
+
+
+// Use Effect to call the getUsers function 
 useEffect(() => {
   getUsers();
   
 },[])
 
+
+
 // RENDER return 
   return (
     <React.Fragment>
-  
+  <div className='container'>
+<SearchBar data={users} updateUsers={value => setUsers(value)}/>
+
+
 {/* setup the table strcuture  */}
 <table className='table'>
 <thead className='thead-light'>
@@ -74,6 +81,7 @@ useEffect(() => {
 </tbody>
 
 </table>
+</div>
     </React.Fragment>
   
   
