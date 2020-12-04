@@ -1,6 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './UserCard'
+import {faArrowAltCircleUp} from "@fortawesome/free-solid-svg-icons";
+import {faArrowAltCircleDown} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UserCard from './UserCard'
 
 const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
@@ -9,6 +12,24 @@ const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
 const UserList = () =>{
 // set states
   const [users,setUsers] = useState([])
+
+  // sort by last name A-Z
+const sortNamesAscending = (userObj)=>{  
+const newList = [...users].sort((a,b)=> {
+  return a.name.last > b.name.last ? 1: -1
+})
+setUsers(newList)
+  }
+
+    // sort by last name Z-A
+  const sortNamesDescending = (userObj)=>{  
+    const newList = [...users].sort((a,b)=> {
+      return b.name.last > a.name.last ? 1: -1
+    })
+    setUsers(newList)
+      }
+
+
 
 // fetch data from random user api
 const getUsers = async ()=>{
@@ -26,12 +47,13 @@ useEffect(() => {
 // RENDER return 
   return (
     <React.Fragment>
+  
 {/* setup the table strcuture  */}
 <table className='table'>
 <thead className='thead-light'>
   <tr>
     <th scope='col'></th>
-    <th scope='col'>Name</th>
+    <th scope='col'>Name  <FontAwesomeIcon icon={faArrowAltCircleUp} onClick={(e)=>{sortNamesAscending(users)}}/> <FontAwesomeIcon icon={faArrowAltCircleDown} onClick={(e)=>{sortNamesDescending(users)}}/></th>
     <th scope='col'>Phone</th>
     {/* <th scope='col'>PHONE</th> */}
   </tr>
