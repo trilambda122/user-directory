@@ -27,7 +27,7 @@ return (
 <React.Fragment>
 <div className="input-group mb-1 mt-3">
   <div className="input-group-prepend">
-    <span className="input-group-text" id="basic-addon1" onClick={()=>{window.location.href='/'}}><FontAwesomeIcon icon={faHome}/></span>
+    <span className="input-group-text" id="basic-addon1" onClick={()=>{window.location.href='/hw19-user-directory'}}><FontAwesomeIcon icon={faHome}/></span>
   </div>
   <input type="text" value={searchText} 
   className="form-control" placeholder="Seach by lastname" 
