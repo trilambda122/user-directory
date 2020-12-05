@@ -3,24 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SearchBar = ({data,updateUsers}) =>{
+const SearchBar = ({data,updateVisUsers}) =>{
 const [searchText,setSearchText] =useState('');
 
-// const handleKeyPress = (e)=>{
-
-//   if (e.key === 'Enter') {
-//     onSearch(e.target.value)
-//   }
-
-// }
 
 const onSearch = (searchStr)=>{
-  const searchResults = data.filter((data)=>{
+  const searchResults = data.filter((item)=>{
     const pattern = `^${searchStr}`
     const re = new RegExp(pattern,'gi')
-    return data.name.last.match(re)
+    return item.name.last.match(re)
   })
- updateUsers(searchResults)
+ updateVisUsers(searchResults)
 }
 
 return (
@@ -37,7 +30,7 @@ return (
     setSearchText(e.target.value)
     onSearch(e.target.value)
   }}
-  // onKeyPress={handleKeyPress}
+ 
   />
 </div>
 </React.Fragment>

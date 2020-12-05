@@ -7,7 +7,6 @@ import {faAddressCard, faArrowAltCircleUp} from "@fortawesome/free-solid-svg-ico
 import {faArrowAltCircleDown} from "@fortawesome/free-solid-svg-icons";
 import {faEnvelope,faPhone,faMobile,faAdressCard} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import UserCard from './UserCard'
 import './style.css'
 
 const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
@@ -17,6 +16,7 @@ let singleUser ={}
 const UserList = () =>{
 // set states
   const [users,setUsers] = useState([])
+  const [visUsers,setVisUsers] = useState([])
   // const [showCard,setShowCard] = useState(false)
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -67,6 +67,7 @@ const getUsers = async ()=>{
   const usersJSON = await response.json()
  
   setUsers(usersJSON.results)
+  setVisUsers(usersJSON.results)
 }
 
 
@@ -107,7 +108,7 @@ useEffect(() => {
     {/* add search bar component and passing the users and a function for updating the state */}
   
   {/* {showCard && <UserCard data={users}/>} */}
-<SearchBar data={users} updateUsers={value => setUsers(value)}/>
+<SearchBar data={users} updateVisUsers={value => setVisUsers(value)}/>
 
 
 {/* setup the table strcuture  */}
@@ -122,7 +123,7 @@ useEffect(() => {
 </thead>
 <tbody>
 {/* loop over users object array that was returned from the api call  */}
-{users.map((user)=>{
+{visUsers.map((user)=>{
 
  return <tr key={user.login.uuid} className='row-effect' 
   onClick={(e)=>{
