@@ -1,9 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[![Generic badge](https://img.shields.io/static/v1?label=license&message=MIT%20License&color=green&style=for-the-badge)](https://shields.io/) 
+# Project name : USER LISTING
+## Live project site can be acces here: 	[HW-19 User Directory](https://trilambda122.github.io/hw19-user-directory/)
 
+## Project Repo [hw19-user-directory](https://github.com/trilambda122/hw19-user-directory)
+
+---
+## Table of Contents
+
+[Description](#description)...
+
+[Installation Requirements](#installtion-requirments)...
+
+[Useage](#useage)...
+
+[License](#License)...
+
+[Contribitors](#Contribitors)...
+
+[Tests](#Tests)...
+
+[Questions](#Questions)...
+
+[Application Screen Shots](#ScreenShots)...
+
+---
+## Description
+
+User directory application using react framework. Application includes the ability to sort and search. 
+Application includes some hover effects 
+
+
+---
+
+## Installtion requirments
+npm install
+
+---
+## Useage
 In the project directory, you can run:
 
 ### `npm start`
@@ -13,11 +48,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +59,39 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
+## License
+NOTICE This application is covered under MIT License license.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+## Contribitors 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Shane Schilling
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
+## Tests
+None at this time 
 
-## Learn More
+---
+## Questions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Github profile can be found here:  http://github.com/trilambda122
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please direct any additonal questions to: shane@sschilling.com
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
+## ScreenShots
 
-### Analyzing the Bundle Size
+### *MOBILE*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="./screenshots/phone-1.png" alt="drawing" width="300"/>
 
-### Making a Progressive Web App
+<img src="./screenshots/phone-2.png" alt="drawing" width="300"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### *WEB PAGE*
 
-### Advanced Configuration
+<img src="./screenshots/web-1.png" alt="drawing" width="400"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="./screenshots/web-2.png" alt="drawing" width="400"/>
