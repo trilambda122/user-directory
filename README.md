@@ -28,8 +28,13 @@
 ---
 ## Description
 
-User directory application using react framework. Application includes the ability to sort and search. 
-Application includes some hover effects 
+- User directory application using react framework.
+
+- Application was built with a mobile first view
+
+- Application includes the ability to sort and search. 
+
+- Application includes some hover effects 
 
 
 ---
