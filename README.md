@@ -28,6 +28,8 @@
 ---
 ## Description
 
+User directory application using react framework built with a mobile-first viewpoint. The application includes sort and search functionality along with clean styling.
+
 - User directory application using react framework.
 
 - Application was built with a mobile first view
