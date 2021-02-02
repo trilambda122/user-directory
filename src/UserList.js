@@ -9,7 +9,7 @@ import {faEnvelope,faPhone,faMobile,faAdressCard} from "@fortawesome/free-solid-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './style.css'
 
-const url='https://randomuser.me/api/?results=100&nat=us&seed=userdir'
+const url='https://randomuser.me/api/?results=200&nat=us&seed=userdir'
 
 let singleUser ={}
 
@@ -47,18 +47,18 @@ const UserList = () =>{
   }
 // sort by last name A-Z
 const sortNamesAscending = (userObj)=>{  
-const newList = [...users].sort((a,b)=> {
+const newList = [...visUsers].sort((a,b)=> {
   return a.name.last > b.name.last ? 1: -1
 })
-setUsers(newList)
+setVisUsers(newList)
   }
 
 // sort by last name Z-A
   const sortNamesDescending = (userObj)=>{  
-    const newList = [...users].sort((a,b)=> {
+    const newList = [...visUsers].sort((a,b)=> {
       return b.name.last > a.name.last ? 1: -1
     })
-    setUsers(newList)
+    setVisUsers(newList)
       }
 
 // fetch data from random user api
@@ -116,8 +116,8 @@ useEffect(() => {
 <thead className='thead-light'>
   <tr>
     <th scope='col'></th>
-    <th scope='col'>Name  <FontAwesomeIcon icon={faArrowAltCircleUp} onClick={(e)=>{sortNamesAscending(users)}}/> 
-    <FontAwesomeIcon icon={faArrowAltCircleDown} onClick={(e)=>{sortNamesDescending(users)}}/></th>
+    <th scope='col'>Name  <FontAwesomeIcon icon={faArrowAltCircleUp} onClick={(e)=>{sortNamesAscending(visUsers)}}/> 
+    <FontAwesomeIcon icon={faArrowAltCircleDown} onClick={(e)=>{sortNamesDescending(visUsers)}}/></th>
     <th scope='col'>Phone</th>
   </tr>
 </thead>

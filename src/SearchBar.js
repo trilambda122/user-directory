@@ -29,9 +29,7 @@ return (
   onChange={(e)=>{
     setSearchText(e.target.value)
     onSearch(e.target.value)
-  }}
- 
-  />
+  }}/>
 </div>
 </React.Fragment>
 
