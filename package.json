@@ -1,6 +1,6 @@
 {
-  "homepage": "https://trilambda122.github.io/hw19-user-directory",
-  "name": "hw19-user-directory",
+  "homepage": "https://trilambda122.github.io/user-directory",
+  "name": "user-directory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
