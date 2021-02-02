@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/hw19-user-directory/static/css/main.32f2d696.chunk.css",
-    "main.js": "/hw19-user-directory/static/js/main.0132a68b.chunk.js",
-    "main.js.map": "/hw19-user-directory/static/js/main.0132a68b.chunk.js.map",
-    "runtime-main.js": "/hw19-user-directory/static/js/runtime-main.e5b022df.js",
-    "runtime-main.js.map": "/hw19-user-directory/static/js/runtime-main.e5b022df.js.map",
-    "static/css/2.1a02f21c.chunk.css": "/hw19-user-directory/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.2e32b29a.chunk.js": "/hw19-user-directory/static/js/2.2e32b29a.chunk.js",
-    "static/js/2.2e32b29a.chunk.js.map": "/hw19-user-directory/static/js/2.2e32b29a.chunk.js.map",
-    "static/js/3.d2ac6ac0.chunk.js": "/hw19-user-directory/static/js/3.d2ac6ac0.chunk.js",
-    "static/js/3.d2ac6ac0.chunk.js.map": "/hw19-user-directory/static/js/3.d2ac6ac0.chunk.js.map",
-    "index.html": "/hw19-user-directory/index.html",
-    "static/css/2.1a02f21c.chunk.css.map": "/hw19-user-directory/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.32f2d696.chunk.css.map": "/hw19-user-directory/static/css/main.32f2d696.chunk.css.map",
-    "static/js/2.2e32b29a.chunk.js.LICENSE.txt": "/hw19-user-directory/static/js/2.2e32b29a.chunk.js.LICENSE.txt"
+    "main.css": "/user-directory/static/css/main.32f2d696.chunk.css",
+    "main.js": "/user-directory/static/js/main.ba4eab4b.chunk.js",
+    "main.js.map": "/user-directory/static/js/main.ba4eab4b.chunk.js.map",
+    "runtime-main.js": "/user-directory/static/js/runtime-main.ab7da9a4.js",
+    "runtime-main.js.map": "/user-directory/static/js/runtime-main.ab7da9a4.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/user-directory/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.94a2cd05.chunk.js": "/user-directory/static/js/2.94a2cd05.chunk.js",
+    "static/js/2.94a2cd05.chunk.js.map": "/user-directory/static/js/2.94a2cd05.chunk.js.map",
+    "static/js/3.c78ab3b3.chunk.js": "/user-directory/static/js/3.c78ab3b3.chunk.js",
+    "static/js/3.c78ab3b3.chunk.js.map": "/user-directory/static/js/3.c78ab3b3.chunk.js.map",
+    "index.html": "/user-directory/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/user-directory/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.32f2d696.chunk.css.map": "/user-directory/static/css/main.32f2d696.chunk.css.map",
+    "static/js/2.94a2cd05.chunk.js.LICENSE.txt": "/user-directory/static/js/2.94a2cd05.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5b022df.js",
+    "static/js/runtime-main.ab7da9a4.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.2e32b29a.chunk.js",
+    "static/js/2.94a2cd05.chunk.js",
     "static/css/main.32f2d696.chunk.css",
-    "static/js/main.0132a68b.chunk.js"
+    "static/js/main.ba4eab4b.chunk.js"
   ]
 }
