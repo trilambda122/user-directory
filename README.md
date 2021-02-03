@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/static/v1?label=license&message=MIT%20License&color=green&style=for-the-badge)](https://shields.io/) 
 # Project name : USER LISTING
-## Live project site can be acces here: 	[User Directory](https://trilambda122.github.io/hw19-user-directory/)
+## Live project site can be acces here: 	[User Directory](https://trilambda122.github.io/user-directory/)
 
 ## Project Repo [user-directory](https://github.com/trilambda122/user-directory)
 
